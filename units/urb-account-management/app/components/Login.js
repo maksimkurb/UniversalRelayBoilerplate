@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
-import { Actions } from 'react-native-router-flux'
 
 import FloatingLabelTextInput from '../../../../app/components/FloatingLabelTextInput'
 import NetworkLayer from '../../../../app/NetworkLayer'
@@ -65,7 +64,7 @@ export default class Login extends React.Component
           if( cookie.startsWith( 'UserToken1=' ) )
           {
             console.log( 'cookie=' + cookie )
-            UserToken1 = cookie.substring( 13, cookie.indexOf( ';' ) )
+            UserToken1 = cookie.substring( 11, cookie.indexOf( ';' ) )
             console.log( 'UserToken1=' + UserToken1 )
           }
       return response.json( )
